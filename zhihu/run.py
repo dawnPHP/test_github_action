@@ -1,8 +1,16 @@
 import time
+import random
 
-fa = open(r"test.txt", "a")
+num=random.randint(0,9)
+flag=num>3
 
-timsString=time.strftime("%Y/%m/%d %H:%M:%S", time.localtime()) 
-fa.write( str(time.time()) +":\t"+ timsString + "\n" )
+timsString=time.strftime("%Y/%m/%d %H:%M:%S", time.localtime())
+print(timsString)
 
-fa.close()
+if (flag):
+	print(flag)
+	fa = open(r"test.txt", "a")
+	fa.write( str(time.time()) +":\t"+ timsString + "\n" )
+	fa.close()
+else:
+	print("--")
