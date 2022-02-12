@@ -2,7 +2,7 @@ import time
 import random
 
 num=random.randint(0,9)
-flag=num>3
+flag=num>6
 
 timsString=time.strftime("%Y/%m/%d %H:%M:%S", time.localtime())
 print(timsString)
