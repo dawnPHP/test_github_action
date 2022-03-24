@@ -1,16 +1,16 @@
-import time
-import random
+import re
+import requests
 
-num=random.randint(0,9)
-flag=num>5
+#发出请求
+url= 'https://www.163.com/'
 
-timsString=time.strftime("%Y/%m/%d %H:%M:%S", time.localtime())
-print(timsString)
+respose=requests.get(url)
+#print(respose.status_code)# 响应的状态码 200
+#print(respose.content)  #返回字节信息
+#print(respose.text)  #返回文本内容
 
-if (flag):
-	print(flag)
-	fa = open(r"test.txt", "a")
-	fa.write( str(time.time()) +":\t"+ timsString + "\n" )
-	fa.close()
-else:
-	print("--")
+# write to file
+with open("/home/wangjl/dustbin/index.html",'w') as f:
+    f.write(respose.text)
+
+print("end")
