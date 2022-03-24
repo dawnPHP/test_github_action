@@ -10,7 +10,7 @@ respose=requests.get(url)
 #print(respose.text)  #返回文本内容
 
 # write to file
-with open("/home/wangjl/dustbin/index.html",'w') as f:
+with open("zhihu/index.html",'w') as f:
     f.write(respose.text)
 
 print("end")
