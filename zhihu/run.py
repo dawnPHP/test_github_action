@@ -2,7 +2,7 @@ import re
 import requests
 
 #发出请求
-url= 'https://www.163.com/'
+url= 'https://www.economist.com/'
 
 respose=requests.get(url)
 #print(respose.status_code)# 响应的状态码 200
@@ -10,7 +10,7 @@ respose=requests.get(url)
 #print(respose.text)  #返回文本内容
 
 # write to file
-with open("zhihu/index.html",'w') as f:
+with open("index.html",'w') as f:
     f.write(respose.text)
 
 print("end")
